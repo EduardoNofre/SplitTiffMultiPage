@@ -40,9 +40,9 @@ public class SplitTiffMultiPage {
 				{
 					System.out.println(listaFiles[countFile]);
 					
-					FileSeekableStream ss = new FileSeekableStream(listaFiles[countFile]);
+					FileSeekableStream fss = new FileSeekableStream(listaFiles[countFile]);
 					
-					ImageDecoder dec = ImageCodec.createImageDecoder("tiff", ss, null);
+					ImageDecoder dec = ImageCodec.createImageDecoder("tiff", fss, null);
 					
 					int count = dec.getNumPages();
 					
@@ -82,7 +82,7 @@ public class SplitTiffMultiPage {
 
 			else
 			{
-				System.out.println("Arquivo Não encontrado");
+				System.out.println("Arquivo NÃ£o encontrado");
 			}
 		} 
 
